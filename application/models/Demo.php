@@ -53,4 +53,24 @@ class DemoModel {
             var_dump('<pre>', $item);
         }
     }
+
+    public function mq()
+    {
+        // rabbitmq
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 1), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 2), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 3), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 4), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 5), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 1), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 2), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 3), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 4), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 5), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 1), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 2), 'routing_yaf'));
+        var_dump('<pre>', RabbitMQ::publish('exchange_yaf', array('name' => 'yaf', 'id' => 3), 'routing_yaf'));
+
+        var_dump('<pre>', RabbitMQ::get('exchange_yaf', 'queue_yaf', 'routing_yaf'));
+    }
 }
