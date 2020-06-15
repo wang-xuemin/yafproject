@@ -37,7 +37,14 @@ class IndexController extends Yaf_Controller_Abstract {
 	public function demoAction()
     {
         $demoModel = new DemoModel();
-        $demoModel->demo();
+        // $demoModel->demo();
+        $demoModel->curl();
         exit;
+    }
+    
+    public function curlAction() {
+        $demoModel = new DemoModel();
+        $demoModel->method();
+        exit();
     }
 }
