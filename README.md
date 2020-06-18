@@ -1,6 +1,10 @@
 # yafproject
+
 ##### PHP扩展安装及php.ini设置
 https://github.com/wang-xuemin/pecl
+
+##### eclipse代码提示及自动补全
+https://github.com/wang-xuemin/Library
 
 ##### nginx配置
 ```ssh
